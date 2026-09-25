@@ -4,7 +4,7 @@ project(
     vehicle_control_patform
     VERSION 0.1.0
     DESCRIPTION "Open-Source vehicle body control platform"
-    LANGIAGES C CXX
+    LANGUAGES  C CXX
 )
 
 # All Linux-side application services will use modern C++.
