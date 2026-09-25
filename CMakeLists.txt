@@ -17,5 +17,21 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Keeps generated executables in one easy-to-find place.
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
+# Enables future automated tests.
+include(CTest)
+
+# Build the application-side services.
+add_subdirectory(application_core)
+
+# The real-time controller will be introduced after Zephyr setup.
+option(BUILD_REAL_TIME_CONTROLLER "Build the real-time controller firmware" OFF)
+
+if(BUILD_REAL_TIME_CONTROLLER)
+    add_subdirectory(real_time_controller)
+endif()
+
+
 
 
