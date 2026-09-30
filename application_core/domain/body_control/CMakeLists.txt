@@ -33,8 +33,7 @@ if(BUILD_TESTING)
     )
 
     add_test(
-        NAME vehicle_state_test\
+        NAME vehicle_state_test
         COMMAND vehicle_state_test
     )
-
-    endif()
+endif()

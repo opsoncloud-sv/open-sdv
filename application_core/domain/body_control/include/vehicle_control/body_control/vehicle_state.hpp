@@ -15,3 +15,4 @@ namespace vehicle_control::body_control{
     };
 
     [[nodiscard]] std::string_view to_string(DoorLockState lock_state);
+}
